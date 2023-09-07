@@ -1,9 +1,30 @@
-# toolSegmentation
-Code for 'Efficient tool segmentation for endoscopic videos in the wild' (MIDL 2022).
+# EM Dataset : Tool Segmentation
+**Authors** : Clara Tomasini, Iñigo Alonso, Luis Riazuelo, Ana C. Murillo.
 
-[Paper](https://openreview.net/pdf?id=DPkb7gxt6gZ) and [Video Demo](https://drive.google.com/file/d/1anOHK4h19EesMFc_drYFnbcYtOBeTuJb/view?usp=sharing).
+This software performs tool segmentation on real endoscopy videos. 
 
+### Related Publications:
 
+Clara Tomasini, Iñigo Alonso, Luis Riazuelo and Ana C. Murillo, [**"Efficient tool segmentation for endoscopic videos in the wild"**](https://proceedings.mlr.press/v172/tomasini22a.html), *2022 International Conference on Medical Imaging with Deep Learning (MIDL)*, pp. 1218-1234 [PDF](https://proceedings.mlr.press/v172/tomasini22a/tomasini22a.pdf)
+
+```
+@inproceedings{tomasini2022efficient,
+  title={Efficient tool segmentation for endoscopic videos in the wild},
+  author={Tomasini, Clara and Alonso, I{\~n}igo and Riazuelo, Luis and Murillo, Ana C},
+  booktitle={International Conference on Medical Imaging with Deep Learning},
+  pages={1218--1234},
+  year={2022},
+  organization={PMLR}
+}
+```
+
+This software has been trained and evaluated with a few sequences from the EndoMapper dataset, as described in:
+
+Azagra P. et al. **Endomapper dataset of complete calibrated endoscopy procedures**. *Scientific Data*. 2023. Accepted for publication.
+
+A Video Demo of the segmentations obtained on this dataset is available [here](https://drive.google.com/file/d/1anOHK4h19EesMFc_drYFnbcYtOBeTuJb/view?usp=sharing).
+
+/////////////
 This repository is built on a fork of projects **robot-surgery-segmentation** (at https://github.com/ternaus/robot-surgery-segmentation), the official implementation of the paper 
 
 [1] *Automatic Instrument Segmentation in Robot-Assisted Surgery using Deep Learning*. Shvets, Alexey A., et al. IEEE Int. Conf. on Machine Learning and Applications. 2018.
