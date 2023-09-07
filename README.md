@@ -22,7 +22,7 @@ This software has been trained and evaluated with a few sequences from the EndoM
 
 Azagra P. et al. **Endomapper dataset of complete calibrated endoscopy procedures**. *Scientific Data*. 2023. Accepted for publication.
 
-A Video Demo of the segmentations obtained on this dataset is available [here](https://drive.google.com/file/d/1anOHK4h19EesMFc_drYFnbcYtOBeTuJb/view?usp=sharing).
+A video demo of the segmentations obtained on this dataset is available [here](https://drive.google.com/file/d/1anOHK4h19EesMFc_drYFnbcYtOBeTuJb/view?usp=sharing).
 
 # 1. License
 **EM Dataset: Tool segmentation** is released under AGPLv3 license. 
@@ -49,10 +49,9 @@ The software has been tested on **Ubuntu 20.04** and uses [Python](https://www.p
 * Tqdm 4.19.4
 * Albumentations
 * Matplotlib
-  
-///////////////////////////////
 
-## How to run
+# 3. How to run
+
 Folder **endovis_challenge** contains files adapted from **robot-surgery-segmentation** for models LinkNet and UNet. 
 Folder **mininet** contains files adapted from **MiniNet-v2** as well as the implementation of our clasifier. 
 
@@ -60,7 +59,7 @@ Fine-tuned models and trained clasifier are available [here](https://drive.googl
 
 File *mininet/generate_masks.py* provides an example of how to use the full segmentation pipeline including MiniNet model and our clasifier in order to get a prediction for a given image.
 
-## Results 
+# 4. Results 
 Models UNet and LinkNet were available in **robot-surgery-segmentation** pretrained on images from the EndoVis17 dataset, and were then fine-tuned on more specific images from EndoMapper dataset. Mininet was trained from scratch on EndoVis17 ndataset and then fine-tuned on EndoMapper dataset.
 File *endovis_challenge/train_ft.sh* performs training of LinkNet and UNet models. File *mininet/train.sh* performs training of MiniNet model. File *mininet/train_classif.sh* performs training of our clasifier. 
 The following figure shows examples of binary segmentations from EndoMapper dataset obtained using different models without applying our pre-filtering clasifier. 
