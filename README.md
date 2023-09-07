@@ -24,19 +24,19 @@ Azagra P. et al. **Endomapper dataset of complete calibrated endoscopy procedure
 
 A Video Demo of the segmentations obtained on this dataset is available [here](https://drive.google.com/file/d/1anOHK4h19EesMFc_drYFnbcYtOBeTuJb/view?usp=sharing).
 
-/////////////
-This repository is built on a fork of projects **robot-surgery-segmentation** (at https://github.com/ternaus/robot-surgery-segmentation), the official implementation of the paper 
+# 1. License
+**EM Dataset: Tool segmentation** is released under AGPLv3 license. 
+
+### Third-party code
+This repository is built on a fork of projects [**robot-surgery-segmentation**](https://github.com/ternaus/robot-surgery-segmentation) (with MIT License), the official implementation of the paper 
 
 [1] *Automatic Instrument Segmentation in Robot-Assisted Surgery using Deep Learning*. Shvets, Alexey A., et al. IEEE Int. Conf. on Machine Learning and Applications. 2018.
 
-and **MiniNet-v2** (at https://github.com/Shathe/MiniNet-v2), the official implementation of the paper
+and [**MiniNet-v2**](https://github.com/Shathe/MiniNet-v2) (with AGPLv3 License), the official implementation of the paper
 
 [2] *MiniNet: An Efficient Semantic Segmentation ConvNet for Real-time Robotic Applications*. Alonso, Iñigo et al. IEEE Transactions on Robotics. 2020.
 
-The main goal is to obtain a tool segmentation model adapted to the requirements of the project **EndoMapper**.
-
-## Authors
-Clara Tomasini, Iñigo Alonso, Ana Murillo, Luis Riazuelo
+///////////////////////////////
 
 ## How to run
 Folder **endovis_challenge** contains files adapted from **robot-surgery-segmentation** for models LinkNet and UNet. 
