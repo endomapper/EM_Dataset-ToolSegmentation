@@ -41,6 +41,15 @@ The software has been tested on **Ubuntu 20.04** and uses [Python](https://www.p
 
 ### Required packages:
 
+* PyTorch 0.4.0
+* TorchVision 0.2.1
+* Tensorflow 
+* Numpy 1.14.0
+* Opencv-python 3.3.0.10
+* Tqdm 4.19.4
+* Albumentations
+* Matplotlib
+  
 ///////////////////////////////
 
 ## How to run
