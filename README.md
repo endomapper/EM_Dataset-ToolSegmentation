@@ -37,7 +37,10 @@ and [**MiniNet-v2**](https://github.com/Shathe/MiniNet-v2) (with AGPLv3 License)
 [2] *MiniNet: An Efficient Semantic Segmentation ConvNet for Real-time Robotic Applications*. Alonso, Iñigo et al. IEEE Transactions on Robotics. 2020.
 
 # 2. Prerequisites
-The software has been tested on **Ubuntu 20.04**.
+The software has been tested on **Ubuntu 20.04** and uses [Python](https://www.python.org). **Required 3.X**.
+
+### Required packages:
+
 ///////////////////////////////
 
 ## How to run
