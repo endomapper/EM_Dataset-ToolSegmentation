@@ -50,18 +50,32 @@ The software has been tested on **Ubuntu 20.04** and uses [Python](https://www.p
 * Albumentations
 * Matplotlib
 
-# 3. How to run
+# 3. Proposed pipeline
+
+Our proposed pipeline to segment tools in full endoscopy videos includes a classifier to determine whether or not to perform the segmentation (if a tool is in the frame or not), and MiniNet to perform the segmentation. 
+![results](/images/pipeline_efficient.png)
+
+# 4. How to run
 
 Folder **endovis_challenge** contains files adapted from **robot-surgery-segmentation** for models LinkNet and UNet. 
 Folder **mininet** contains files adapted from **MiniNet-v2** as well as the implementation of our clasifier. 
+
+### Training
+
+* File *endovis_challenge/train_ft.sh* performs training of LinkNet and UNet models. 
+* File *mininet/train.sh* performs training of MiniNet model. 
+* File *mininet/train_classif.sh* performs training of our clasifier. 
+
+### Testing
 
 Fine-tuned models and trained clasifier are available [here](https://drive.google.com/drive/folders/1BYyfUek6arVhpgChWuhD6JVQ9-RS4ZNm?usp=sharing). 
 
 File *mininet/generate_masks.py* provides an example of how to use the full segmentation pipeline including MiniNet model and our clasifier in order to get a prediction for a given image.
 
-# 4. Results 
-Models UNet and LinkNet were available in **robot-surgery-segmentation** pretrained on images from the EndoVis17 dataset, and were then fine-tuned on more specific images from EndoMapper dataset. Mininet was trained from scratch on EndoVis17 ndataset and then fine-tuned on EndoMapper dataset.
-File *endovis_challenge/train_ft.sh* performs training of LinkNet and UNet models. File *mininet/train.sh* performs training of MiniNet model. File *mininet/train_classif.sh* performs training of our clasifier. 
+# 5. Results 
+
+Models UNet and LinkNet were available in **robot-surgery-segmentation** pretrained on images from the EndoVis17 dataset, and were then fine-tuned on more specific images from EndoMapper dataset. Mininet was trained from scratch on EndoVis17 dataset and then fine-tuned on EndoMapper dataset.
+
 The following figure shows examples of binary segmentations from EndoMapper dataset obtained using different models without applying our pre-filtering clasifier. 
 The last column shows an example of a frame without tool in which all segmentation models introduce False Positives. The effect of our pre-filtering classifier can be seen in the [Video Demo](https://drive.google.com/file/d/1anOHK4h19EesMFc_drYFnbcYtOBeTuJb/view?usp=sharing).
 
