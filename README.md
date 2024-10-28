@@ -71,7 +71,7 @@ Folder **mininet** contains files adapted from **MiniNet-v2** as well as the imp
 Fine-tuned models and trained clasifier are available [here](https://drive.google.com/drive/folders/1BYyfUek6arVhpgChWuhD6JVQ9-RS4ZNm?usp=sharing). 
 
 File *mininet/generate_masks.py* provides an example of how to use the full segmentation pipeline including MiniNet model and our clasifier in order to get a prediction for a given image.
-Create folders *data/images* at main to store images on which to apply the segmentation.
+Create folder *data/images* at main to store images on which to apply the segmentation.
 
 # 5. Results 
 
