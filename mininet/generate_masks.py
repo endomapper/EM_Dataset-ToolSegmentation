@@ -41,7 +41,7 @@ def create_clasifier(base_model):
 
 def main():
     print(tf.__version__)
-    os.environ['CUDA_VISIBLE_DEVICES'] = '-1'
+    #os.environ['CUDA_VISIBLE_DEVICES'] = '-1'
 
     model_encod = MiniNetModif.MiniNetv2(num_classes=2,include_top=True)
     model_decod = MiniNetModif.MiniNetDecod(num_classes=2,include_top=True)
@@ -89,12 +89,12 @@ def main():
             mask_filt = np.uint8(mask_filt>0.5)*255
             
             res_mask = Image.fromarray(mask_filt)
-            #res_mask.save('results/'+img_path.split('/')[-1])
+            res_mask.save('results/'+img_path.split('/')[-1])
             
             res_overlay = img0.astype(np.uint8)
             res_overlay[24:,160:,:] = mask_overlay(res_overlay[24:,160:,:], mask_filt,color=(0,1,0))
             res_overlay = Image.fromarray(res_overlay)
-            #res_overlay.save('results_overlay/'+ img_path.split('/')[-1])
+            res_overlay.save('results_overlay/'+ img_path.split('/')[-1])
             
 
 if __name__ == '__main__':
